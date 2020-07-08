@@ -18,8 +18,8 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 // define routes
-app.get('/',
-  passport.authenticate('github'));
+// app.get('/',
+//   passport.authenticate('github'));
 
 app.get('/auth/github/callback', 
   passport.authenticate('github', { failureRedirect: '/login' }),
